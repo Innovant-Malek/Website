@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Login from "../components/Log-in/Log-in";
+import ResgisterBody from "../components/RegisterBody/ResgisterBody";
 import { useRouter } from "next/router";
 import { isAuthenticated } from "../helpers/auth";
 
-export default function Home() {
+function Register() {
   const router = useRouter();
 
   if (isAuthenticated()) {
@@ -13,9 +13,11 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Sign-in</title>
+        <title>Register</title>
       </Head>
-      <Login />
+      <ResgisterBody />
     </div>
   );
 }
+
+export default Register;
