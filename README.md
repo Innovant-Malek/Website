@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next.js 
+## What is Next.js?
+It is a React framework that allows creating pre-rendered React applications either as Server Side Rendering (SSR) or Static Site Generation (SSG).
 
-## Getting Started
+SSR: React components are rendered into HTML pages on the server after a page request comes from the browser.
 
-First, run the development server:
+SSG: Components are rendered into HTML pages at build time. In other words, after deploying the web pages, Javascript bundles it to web.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Why use it?
+React without Next.js renders components in the browser (client-side rendering.)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+With Next.js, our React components are already rendered into HTML pages by the time they reach the browser, so the application behaves as a SPA (Simple Page Application) and all routes can be handled on the client-side. The benefits of SSR and SSG are improvement of performance because components are pre-rendered, meaning less work in the browser. Also results in better SEO (Search Engine Optimization) than the traditional SPA because the response from the server is a fully rendered HTML page rather than the blank one returned from a regular React application without Next.js.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Initial Settings
+In our terminal type:
+npx create-next-app nextSample
